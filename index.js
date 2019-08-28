@@ -5,16 +5,12 @@ const bot = new Client();
 bot.on('ready', () => console.log(`Logged in as ${bot.user.tag}`));
 
 bot.on('message', message => {
+    let c = 0;
     if(message.author.bot) return;
-    let msg = message.content;
-    let count = 0;
-    let clist = msg.split("");
-    clist.forEach(char => {
-        if(char === 'e') count++;
-    })
-    if(count == msg.length){
-        message.channel.send(msg);
-    }
+    message.content.split("").forEach(char => {
+        if(char === 'e') c++;
+    });
+    if(c == message.content.length) message.channel.send(message.content);
 });
 
-bot.login('token here');
+bot.login('NjE2MzQ4MzkzMzc5MzMyMDk2.XWbXCg.RhubvdPXFphEs2aLsEEDZjgp2Qc');
