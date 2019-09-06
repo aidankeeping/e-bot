@@ -13,4 +13,4 @@ bot.on('message', message => {
     if(c == message.content.length) message.channel.send(message.content);
 });
 
-bot.login('NjE2MzQ4MzkzMzc5MzMyMDk2.XWbXCg.RhubvdPXFphEs2aLsEEDZjgp2Qc');
+bot.login('token');
